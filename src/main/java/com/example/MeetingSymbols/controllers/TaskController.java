@@ -10,7 +10,7 @@ public class TaskController {
     @Autowired
     private TaskService taskService;
 
-    @PostMapping("/")
+    @PostMapping("/api/task")
     public String meetingSymbol(@RequestBody(required = false) StringTaskDto stringTaskDto){
         if (stringTaskDto==null || stringTaskDto.getString()==null || stringTaskDto.getString().replaceAll(" ","").length() == 0){
             return new Exception("String is null").getMessage();
